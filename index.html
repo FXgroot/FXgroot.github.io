@@ -23,6 +23,54 @@
 		<script src="js/custom.js"></script>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+		<style>
+			.skill-container {
+				width: 60%;
+				margin: 0 auto;
+			  }
+			  .skill {
+				display: flex;
+				align-items: center;
+				margin: 15px 0;
+			  }
+			  .skill i {
+				font-size: 30px;
+				margin-right: 15px;
+				min-width: 30px;
+			  }
+			  .skill-name {
+				font-size: 1.2em;
+				margin-right: 10px;
+				flex: 2;
+			  }
+			  .progress {
+				flex: 4;
+				background-color: #444;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+				margin-right: 15px;
+			  }
+			  .progress-bar {
+				height: 20px;
+				background-image: linear-gradient(to right, #42a5f5, #1e88e5);
+				width: 0%;
+				border-radius: 10px 0 0 10px;
+				transition: width 0.5s ease;
+			  }
+			  .skill-level {
+				min-width: 50px;
+				text-align: right;
+				margin-right: 15px;
+			  }
+			  .learning-level {
+				font-size: 0.9em;
+				color: #aaa;
+				text-align: right;
+				min-width: 80px;
+			  }
+			</style>
 	</head>
 	<body id="top">
 
@@ -157,69 +205,203 @@
 				</div>
 			</div>
 		</section>
+		
 		<br>
 		<hr>
     	<br>
+
     	<section id="skills">
     		<div class="container">
     			<div class="row">
-    				
 					<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s" style="font-size: large;">SKILLS <span>DEVELOPED</span> SO FAR</h2>
-    				</div>
+						<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s" style="font-size: large;">
+							SKILLS <span>DEVELOPED</span> SO FAR
+						</h2>
+					</div>
 					<h3></h3>
 					<div class="w-128 h-64">
-						<p class="text-center">"Live as if you were to die tomorrow; learn as if you were to live forever." </p>
-						<p class="text-center text-primary"><br>-Mahtma Gandhi</p>
-					</div>
-					<div class="text-justify w-128 h-16">
-						<p>As the above quote can give an idea that I am still in a learning stage ,here are few things I have learnt about and have a good grip on these things.</p>
-					</div>
-				<br>
-					<table class="table table-dark   table-bordered  table-responsive" >
-						<tr>
-							<td><i class="fab fa-contao" style=" font-size: 30px;"></i></td>
-							<td > C Programing Language</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-contao " style=" font-size: 25px;"></i>
-								<i class="fas fa-plus " style=" font-size: 25px;"></i>
-								<i class="fas fa-plus " style=" font-size: 25px;"></i>
-							</td>
-							<td > C++ Programing Language</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-stack-overflow" style=" font-size: 30px;"></i></td>
-							<td> Data Structures And Algorithms</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-java" style=" font-size: 30px;margin-left: auto; margin-right: auto;"></i></td>
-							<td> JAVA programing language</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-node-js" style=" font-size: 30px;"></i></td>
-							<td > JavaScript programing language</td>
-						</tr>
-						<tr>
-							<th><i class="fab fa-html5" style=" font-size: 30px;"></i></th>
-							<td> HTML</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-css3" style=" font-size: 30px;"></i></td>
-							<td > CSS</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-python"></i></td>
-							<td> Python</td>
-						</tr>
-						<tr>
-							<td><i class="fab fa-database"></i></td>
-							<td> Database Management systems</td>
-						</tr>
-					</table>
-    			</div>
-    		</div>
+						<p class="text-center">"Live as if you were to die tomorrow; learn as if you were to live forever."</p>
+						<p class="text-center text-primary"><br>- Mahatma Gandhi</p>
+					  </div>
+					  <div class="text-justify w-128 h-16">
+						<p>Inspired by the wisdom of many such Legends, I believe in continuous learning and growth. My journey so far has been filled with curiosity and dedication, allowing me to develop a solid foundation in various domains. Below is a summary of the key skills I've acquired and continue to refine.</p>
+					  </div>
+					  
+					<br>
+					<div class="skill-container">
+						<div class="skill">
+						  <i class="fab fa-contao"></i>
+						  <div class="skill-name">C Programming Language</div>
+						  <div class="progress">
+							<div class="progress-bar" id="c-progress"></div>
+						  </div>
+						  <div class="skill-level" id="c-level">70%</div>
+						  <div class="learning-level">Advanced</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-cuttlefish"></i><i class="fas fa-plus"></i><i class="fas fa-plus"></i>
+						  <div class="skill-name">C++ Programming Language</div>
+						  
+						  <div class="progress">
+							<div class="progress-bar" id="cpp-progress"></div>
+						  </div>
+						  <div class="skill-level" id="cpp-level">80%</div>
+						  <div class="learning-level">Intermediate</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-stack-overflow"></i>
+						  <div class="skill-name">Data Structures And Algorithms</div>
+						  <div class="progress">
+							<div class="progress-bar" id="dsa-progress"></div>
+						  </div>
+						  <div class="skill-level" id="dsa-level">65%</div>
+						  <div class="learning-level">Intermediate</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-java"></i>
+						  <div class="skill-name">JAVA Programming Language</div>
+						  <div class="progress">
+							<div class="progress-bar" id="java-progress"></div>
+						  </div>
+						  <div class="skill-level" id="java-level">60%</div>
+						  <div class="learning-level">Intermediate</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-node-js"></i>
+						  <div class="skill-name">JavaScript Programming Language</div>
+						  <div class="progress">
+							<div class="progress-bar" id="js-progress"></div>
+						  </div>
+						  <div class="skill-level" id="js-level">75%</div>
+						  <div class="learning-level">Intermediate</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-html5"></i>
+						  <div class="skill-name">HTML</div>
+						  <div class="progress">
+							<div class="progress-bar" id="html-progress"></div>
+						  </div>
+						  <div class="skill-level" id="html-level">85%</div>
+						  <div class="learning-level">Advanced</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-css3"></i>
+						  <div class="skill-name">CSS</div>
+						  <div class="progress">
+							<div class="progress-bar" id="css-progress"></div>
+						  </div>
+						  <div class="skill-level" id="css-level">80%</div>
+						  <div class="learning-level">Advanced</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fab fa-python"></i>
+						  <div class="skill-name">Python</div>
+						  <div class="progress">
+							<div class="progress-bar" id="python-progress"></div>
+						  </div>
+						  <div class="skill-level" id="python-level">90%</div>
+						  <div class="learning-level">Advanced</div>
+						</div>
+						<br>
+						<div class="skill">
+						  <i class="fas fa-database"></i>
+						  <div class="skill-name">Database Management Systems</div>
+						  <div class="progress">
+							<div class="progress-bar" id="dbms-progress"></div>
+						  </div>
+						  <div class="skill-level" id="dbms-level">70%</div>
+						  <div class="learning-level">Intermediate</div>
+						</div>
+
+					  </div>
+					
+					  <script>
+						// Skill levels in percentage
+						const skills = {
+						  'c-progress': 70,
+						  'cpp-progress': 80,
+						  'dsa-progress': 65,
+						  'java-progress': 60,
+						  'js-progress': 75,
+						  'html-progress': 85,
+						  'css-progress': 80,
+						  'python-progress': 90,
+						  'dbms-progress': 70
+						};
+					
+						// Set the width of the progress bars
+						for (const [id, level] of Object.entries(skills)) {
+						  // Set the width of each progress bar based on the skill level
+						  document.getElementById(id).style.width = level + '%';
+						}
+					  </script>
+				
     	</section>
+		<hr>
+		<br>
+		<section id="achievements-projects">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s" style="font-size: large;">
+							ACHIEVEMENTS & <span>PROJECTS</span>
+						</h2>
+					</div>
+				</div>
+		
+				<!-- Achievements Section -->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="wow fadeInUp" data-wow-offset="50" data-wow-delay="0.5s">Achievements</h3>
+						<ul>
+							<li>Completed courses in [Your Courses or Certifications]</li>
+							<li>Participated in [Hackathons, Competitions, etc.]</li>
+							<li>Received [Awards, Scholarships, etc.]</li>
+							<!-- Add more achievements as needed -->
+						</ul>
+					</div>
+				</div>
+		
+				<!-- Projects Section -->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="wow fadeInUp text-center" data-wow-offset="50" data-wow-delay="0.5s" style="size:20px;color:White;">Projects</h3>
+		
+						<!-- Project 1 -->
+						<div class="project">
+							<h4><b>Amulyaboondh Foundation Website</b></h4>
+							<p>Built a website for Amulyaboondh Foundation, an NGO focused on environmental conservation, including elements like water and soil. The website provides information about their initiatives, events, and ways to contribute to the cause.</p>
+							<a href="https://amulyaboondh.com/" class="btn btn-primary">View Project</a>
+						</div>
+						<br>
+		
+						<!-- Project 2 -->
+						<div class="project">
+							<h4><b>HESCOM Cable Fault Manager</b></h4>
+							<p>Developed a website titled HESCOM Cable Fault Manager, aimed at managing and resolving cable faults for HESCOM. Currently in the testing phase, with plans for nationwide implementation upon successful completion.</p>
+							<a href="#" class="btn btn-primary">Not Available</a>
+						</div>
+						<br>
+		
+						<div class="project">
+							<h4><b>Bharatesh Institute of Technology</b></h4>
+							<p>Helped in amending official website of the newly formed Bharatesh Institute of Technology College.</p>
+							<br>
+							<a href="https://bharateshtech.org" class="btn btn-primary">View Project</a>
+						</div>
+						<br>
+					</div>
+				</div>
+			</div>
+		</section>
+		
     	<br>
     	<hr>
 		
@@ -229,7 +411,7 @@
     				<div class="col-md-12">
     					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s" style="font-size: large;">CONTACT <span>ME</span></h2>
     				</div>
-    				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
+    				<!--div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
     					<form action="#" method="post">
     						<label>NAME</label>
     						<input name="fullname" type="text" class="form-control" id="fullname">
@@ -242,14 +424,14 @@
     						
                             <input type="submit" class="form-control">
     					</form>
-    				</div>
-    				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+    				</div-->
+    				<div class="container col-md-12 col-sm-6 col-xs-12 wow fadeInRight text-center" data-wow-offset="50" data-wow-delay="0.6s">
     					<address>
     						<p class="address-title">MY ADDRESS</p>
-    						<span>Sharing me details just in case if you want to contact me.</span>
-    						<p><i class="fa fa-phone"></i> +91 8494939164</p>
-    						<p><i class="fa fa-envelope-open"></i> nihalkarchi243@gmail.com</p>
-    						<p><i class="fa fa-map-marker"></i> Tilakwadi, Belagavi-590006</p>
+    						<span>Sharing my details just in case if you want to contact me.</span>
+    						<p><i class="fa fa-phone" ></i ><span> +91 8494939164</span></p>
+    						<p><i class="fa fa-envelope-open"></i><span> nihalkarchi243@gmail.com</span></p>
+    						<p><i class="fa fa-map-marker"></i><span> Tilakwadi, Belagavi-590006</span></p>
     					</address>
     					<ul class="social-icon">
     						<li><h4>SOCIAL MEDIA ACCOUNTS</h4></li>
